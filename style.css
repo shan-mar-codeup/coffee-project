@@ -1,12 +1,21 @@
-table {
-    margin: 0;
+/*table {*/
+/*    margin: 0;*/
+/*}*/
+
+/*td, th {*/
+/*    border: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/* --------------- form-1 ------------------ */
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-td, th {
-    border: 0;
-    padding: 0;
-}
 
+
+/* --------------- table ------------------ */
 p {
     display: inline-block;
     padding: 0 5px;
@@ -14,4 +23,8 @@ p {
 
 h5 {
     display: inline-block;
+}
+
+.coffee {
+
 }
