@@ -7,6 +7,15 @@
 /*    padding: 0;*/
 /*}*/
 
+/* --------------- form-1 ------------------ */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* --------------- table ------------------ */
 p {
     display: inline-block;
     padding: 0 5px;
