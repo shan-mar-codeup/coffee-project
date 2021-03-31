@@ -70,26 +70,29 @@ function displayCoffeeByRoast() {
 function addNewCoffee(input) {
     input.preventDefault(); // don't submit the form, we just want to update the data
     var coffeeAdded = {name: coffeeName2.value, roast: roast.value};
-    var filteredCoffees = [];
-    // var filteredCoffees = coffees;
-    // delete filteredCoffees.id;
-    // if (!filteredCoffees.includes(coffeeAdded)) {
-    //     !filteredCoffees.unshift(coffeeAdded);
-    // }
 
-    coffees.forEach(function(coffee) {
-
-        if (coffeeAdded.name === coffee.name && coffeeAdded.roast === coffee.roast) {
-            filteredCoffees.push(coffee);
-            alert("This coffee is already in the list!")
-        }
-        else if (coffeeAdded.name !== coffee.name || coffeeAdded.roast !== coffee.roast) {
-            filteredCoffees.push(coffee);
+    coffees.unshift(coffeeAdded);
+    coffees.slice(1).forEach(function(coffee) {
+        if (coffeeAdded.name.toLowerCase() === coffee.name.toLowerCase() && coffeeAdded.roast.toLowerCase() === coffee.roast.toLowerCase()) {
+            coffees.shift(coffeeAdded);
         }
     });
 
-    filteredCoffees.unshift(coffeeAdded);
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    tbody.innerHTML = renderCoffees(coffees);
+
+    // var filteredCoffees = [];
+    // coffees.forEach(function(coffee) {
+    //     if (coffeeAdded.name.toLowerCase() === coffee.name.toLowerCase() && coffeeAdded.roast.toLowerCase() === coffee.roast.toLowerCase()) {
+    //         // filteredCoffees.push(coffee);
+    //         alert("This coffee is already in the list!")
+    //     }
+    //     else if (coffeeAdded.name.toLowerCase() !== coffee.name.toLowerCase()) {
+    //         filteredCoffees.push(coffee);
+    //         filteredCoffees.unshift(coffeeAdded);
+    //     }
+    // });
+    //
+    // tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
