@@ -6,25 +6,89 @@
 /*    border: 0;*/
 /*    padding: 0;*/
 /*}*/
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("images/pexels-photo-2079438.jpeg");
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
 
-/* --------------- form-1 ------------------ */
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* --------------- navbar ------------------ */
+nav {
+    background-color: rgba(255, 255, 255, .5);
+}
+
+/* --------------- form ------------------ */
+.forms {
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: rgba(255, 255, 255, .5);
+}
 form {
     display: flex;
     flex-direction: column;
 }
 
+.btn-primary {
+    background-color: chocolate;
+    border-color: brown;
+}
 
+.btn-primary:hover {
+    background-color: #01353f;
+    border-color: #254754;
+}
 
 /* --------------- table ------------------ */
+table {
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+tbody {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 p {
     display: inline-block;
     padding: 0 5px;
 }
 
 h5 {
+    font-size: 1.25rem;
+    margin: 1rem .5rem;
     display: inline-block;
 }
-
 .coffee {
+    text-align: center;
+}
 
+.coffee div {
+    width: 12rem;
+}
+
+/* --------------- footer ------------------ */
+footer {
+    background-color: rgba(255, 255, 255, .5);
+}
+
+a {
+    color: #303030;
 }

@@ -2,75 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Coffee Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Coffee!</h1>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">Coffee</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-<form>
-    <label for="roast-selection">Roast</label>
-    <select id="roast-selection">
-        <option value="all">all</option>
-        <option value="light">light</option>
-        <option value="medium">medium</option>
-        <option value="dark">dark</option>
-    </select>
-    <label for="coffee-name">Coffee Name</label>
-    <input id="coffee-name" type="text">
-    <input id="submit" type="submit">
-</form>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Order online</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Menu <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
+                </form>
+            </li>
+        </ul>
+        <div class="nav-item" id="signup">
+            <a class="nav-link" href="#"><i class="fa fa-user"></i> Sign up</a>
+        </div>
 
-<form>
-    <h3>Add a Coffee</h3>
-    <label for="roast">Roast</label>
-    <select id="roast">
-        <option value="all">all</option>
-        <option value="light">light</option>
-        <option value="medium">medium</option>
-        <option value="dark">dark</option>
-    </select>
-    <label for="name">Name</label>
-    <input id="name" type="text">
-    <input id="submit2" type="submit">
-</form>
+    </div>
+</nav>
 
-<table>
-<!--    <thead>-->
-<!--    <tr>-->
-<!--        <th>ID</th>-->
-<!--        <th>NAME</th>-->
-<!--        <th>ROAST</th>-->
-<!--    </tr>-->
-<!--    </thead>-->
-    <tbody id="coffees">
-
+<main>
+    <table class="mb-4">
+        <tbody class="d-flex justify-content-center align-items-center" id="coffees">
         <!--   Ascending order from id='1' to id='14'   -->
-<!--        <div class="coffee" id="#1">-->
-<!--            <div>-->
-<!--                <h5>coffee.name</h5>-->
-<!--                <p>coffee.roast</p>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="coffee" id="#1">-->
+        <!--            <div>-->
+        <!--                <h5>coffee.name</h5>-->
+        <!--                <p>coffee.roast</p>-->
+        <!--            </div>-->
+        <!--        </div>-->
 
-<!--        <div class="coffee" id="#2">-->
-<!--            <div>-->
-<!--                <h5>coffee.name</h5>-->
-<!--                <p>coffee.roast</p>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="coffee" id="#2">-->
+        <!--            <div>-->
+        <!--                <h5>coffee.name</h5>-->
+        <!--                <p>coffee.roast</p>-->
+        <!--            </div>-->
+        <!--        </div>-->
 
-<!--        <div class="coffee" id="#3">-->
-<!--            <div>-->
-<!--                <h5>coffee.name</h5>-->
-<!--                <p>coffee.roast</p>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="coffee" id="#3">-->
+        <!--            <div>-->
+        <!--                <h5>coffee.name</h5>-->
+        <!--                <p>coffee.roast</p>-->
+        <!--            </div>-->
+        <!--        </div>-->
 
         <!--   etc, etc...   -->
-    </tbody>
-</table>
+        </tbody>
+    </table>
 
+    <div class="forms">
+        <form>
+            <div class="form-group">
+                <label for="roast-selection">Roast</label>
+                <select class="form-control" id="roast-selection">
+                    <option value="all">all</option>
+                    <option value="light">light</option>
+                    <option value="medium">medium</option>
+                    <option value="dark">dark</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="coffee-name">Coffee Name</label>
+                <input class="form-control" id="coffee-name" type="text">
+            </div>
+            <input class="btn btn-primary" id="submit" type="submit">
+        </form>
+        <hr class="mt-4">
+        <form>
+            <h3 class="text-center mt-2">Add a Coffee</h3>
+            <div class="form-group">
+                <label for="roast">Roast</label>
+                <select class="form-control" id="roast">
+                    <option value="all">all</option>
+                    <option value="light">light</option>
+                    <option value="medium">medium</option>
+                    <option value="dark">dark</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control" id="name" type="text">
+            </div>
+            <input class="btn btn-primary" id="submit2" type="submit">
+        </form>
+    </div>
+</main>
+
+<footer class="text-center">
+    <div id="social-media-links">
+        <div>&#169; 2017 All rights reserved</div>
+        <div>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-rss"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+            <a href="#"><i class="fa fa-flickr"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest"></i></a>
+        </div>
+
+    </div>
+</footer>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <script src="main.js"></script>
 </body>
 </html>
