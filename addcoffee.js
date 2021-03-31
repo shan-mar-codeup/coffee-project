@@ -1,15 +1,18 @@
-function addNewCoffee() {
-    var coffeeAdded = {};
-    coffeeAdded.name = coffeeName2.value;
-    coffeeAdded.roast = roast.value;
-    var filteredCoffees = coffees;
+function addNewCoffee(input) {
+    input.preventDefault(); // don't submit the form, we just want to update the data
+    var coffeeAdded = {name: coffeeName2.value, roast: roast.value};
+    var filteredCoffees = [];
 
-    for (var i = 0; i < coffees.length; i++) {
-        if (filteredCoffees[i].name === coffeeAdded.name && filteredCoffees[i] === coffeeAdded.roast) {
-            // break;
+    coffees.forEach(function(coffee) {
+        if (coffeeAdded.name.toLowerCase() === coffee.name.toLowerCase() && coffeeAdded.roast.toLowerCase() === coffee.roast.toLowerCase()) {
+            // filteredCoffees.push(coffee);
+            alert("This coffee is already in the list!")
         }
-        filteredCoffees.unshift(coffeeAdded);
-    }
+        else if (coffeeAdded.name.toLowerCase() !== coffee.name.toLowerCase()) {
+            filteredCoffees.push(coffee);
+            filteredCoffees.unshift(coffeeAdded);
+        }
+    });
 
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
