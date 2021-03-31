@@ -45,8 +45,8 @@ form {
 }
 
 .btn-primary {
-    background-color: chocolate;
-    border-color: brown;
+    background-color: #430d05;
+    border-color: #430d05;
 }
 
 .btn-primary:hover {
