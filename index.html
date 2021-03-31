@@ -2,74 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Project</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Coffee!</h1>
-
-<form>
-    <label for="roast-selection">Roast</label>
-    <select id="roast-selection">
-        <option value="all">all</option>
-        <option value="light">light</option>
-        <option value="medium">medium</option>
-        <option value="dark">dark</option>
-    </select>
-    <label for="coffee-name">Coffee Name</label>
-    <input id="coffee-name" type="text">
-    <input id="submit" type="submit">
-</form>
-
-<form>
-    <h3>Add a Coffee</h3>
-    <label for="roast">Roast</label>
-    <select id="roast">
-        <option value="all">all</option>
-        <option value="light">light</option>
-        <option value="medium">medium</option>
-        <option value="dark">dark</option>
-    </select>
-    <label for="name">Name</label>
-    <input id="name" type="text">
-    <input id="submit2" type="submit">
-</form>
-
-<table>
-<!--    <thead>-->
-<!--    <tr>-->
-<!--        <th>ID</th>-->
-<!--        <th>NAME</th>-->
-<!--        <th>ROAST</th>-->
-<!--    </tr>-->
-<!--    </thead>-->
-    <tbody id="coffees">
-
+<main>
+    <table>
+        <tbody id="coffees">
         <!--   Ascending order from id='1' to id='14'   -->
-<!--        <div class="coffee" id="#1">-->
-<!--            <div>-->
-<!--                <h5>coffee.name</h5>-->
-<!--                <p>coffee.roast</p>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="coffee" id="#1">-->
+        <!--            <div>-->
+        <!--                <h5>coffee.name</h5>-->
+        <!--                <p>coffee.roast</p>-->
+        <!--            </div>-->
+        <!--        </div>-->
 
-<!--        <div class="coffee" id="#2">-->
-<!--            <div>-->
-<!--                <h5>coffee.name</h5>-->
-<!--                <p>coffee.roast</p>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="coffee" id="#2">-->
+        <!--            <div>-->
+        <!--                <h5>coffee.name</h5>-->
+        <!--                <p>coffee.roast</p>-->
+        <!--            </div>-->
+        <!--        </div>-->
 
-<!--        <div class="coffee" id="#3">-->
-<!--            <div>-->
-<!--                <h5>coffee.name</h5>-->
-<!--                <p>coffee.roast</p>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="coffee" id="#3">-->
+        <!--            <div>-->
+        <!--                <h5>coffee.name</h5>-->
+        <!--                <p>coffee.roast</p>-->
+        <!--            </div>-->
+        <!--        </div>-->
 
         <!--   etc, etc...   -->
-    </tbody>
-</table>
+        </tbody>
+    </table>
+
+    <div class="forms">
+        <form>
+            <label for="roast-selection">Roast</label>
+            <select id="roast-selection">
+                <option value="all">all</option>
+                <option value="light">light</option>
+                <option value="medium">medium</option>
+                <option value="dark">dark</option>
+            </select>
+            <label for="coffee-name">Coffee Name</label>
+            <input id="coffee-name" type="text">
+            <input id="submit" type="submit">
+        </form>
+
+        <form>
+            <h3>Add a Coffee</h3>
+            <label for="roast">Roast</label>
+            <select id="roast">
+                <option value="all">all</option>
+                <option value="light">light</option>
+                <option value="medium">medium</option>
+                <option value="dark">dark</option>
+            </select>
+            <label for="name">Name</label>
+            <input id="name" type="text">
+            <input id="submit2" type="submit">
+        </form>
+    </div>
+
+</main>
+
+
+
+
 
 <script src="main.js"></script>
 </body>
