@@ -67,17 +67,28 @@ function displayCoffeeByRoast() {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function addNewCoffee() {
-    var coffeeAdded = {};
-    coffeeAdded.name = coffeeName2.value;
-    coffeeAdded.roast = roast.value;
+function addNewCoffee(input) {
+    input.preventDefault(); // don't submit the form, we just want to update the data
+    var coffeeAdded = {name: coffeeName2.value, roast: roast.value};
     var filteredCoffees = [];
-    filteredCoffees.push(coffeeAdded);
+    // var filteredCoffees = coffees;
+    // delete filteredCoffees.id;
+    // if (!filteredCoffees.includes(coffeeAdded)) {
+    //     !filteredCoffees.unshift(coffeeAdded);
+    // }
+
     coffees.forEach(function(coffee) {
-        if (coffeeAdded.name !== coffee.name && coffeeAdded.roast !== coffee.roast) {
+
+        if (coffeeAdded.name === coffee.name && coffeeAdded.roast === coffee.roast) {
+            filteredCoffees.push(coffee);
+            alert("This coffee is already in the list!")
+        }
+        else if (coffeeAdded.name !== coffee.name || coffeeAdded.roast !== coffee.roast) {
             filteredCoffees.push(coffee);
         }
     });
+
+    filteredCoffees.unshift(coffeeAdded);
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
