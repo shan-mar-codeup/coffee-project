@@ -20,6 +20,7 @@ body {
 
 .row {
     height: 100%;
+    min-height: 650px;
 }
 
 /* --------------- navbar ------------------ */
@@ -93,10 +94,6 @@ h5 {
 footer {
     width: 100%;
     background-color: rgba(255, 255, 255, .5);
-    position: absolute;
-    top: 100%;
-    left: 99%;
-    transform: translate(-100%, -99%);
 }
 
 a {
@@ -132,6 +129,16 @@ a {
         margin-right: 1rem;
     }
 
+}
+
+/* ----------- Kindle Fire HD 7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 800px) {
+    .container {
+        height: calc(100% - 128px);
+    }
 }
 
 /*Large devices (desktops, 992px and up)*/
