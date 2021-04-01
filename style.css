@@ -9,9 +9,6 @@ body {
     margin: 0;
     font-family: 'Lora', serif;
     background-image: url("images/pexels-photo-2079438.jpeg");
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*align-content: space-between;*/
 }
 
 .container {
@@ -94,7 +91,12 @@ h5 {
 
 /* --------------- footer ------------------ */
 footer {
+    width: 100%;
     background-color: rgba(255, 255, 255, .5);
+    position: absolute;
+    top: 100%;
+    left: 99%;
+    transform: translate(-100%, -99%);
 }
 
 a {
