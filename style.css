@@ -13,14 +13,13 @@ body {
 
 .container {
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex: 1 0 auto;
 }
 
 .row {
     height: 100%;
-    min-height: 650px;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 /* --------------- navbar ------------------ */
@@ -94,6 +93,7 @@ h5 {
 footer {
     width: 100%;
     background-color: rgba(255, 255, 255, .5);
+    flex-shrink: 0;
 }
 
 a {
@@ -131,31 +131,19 @@ a {
 
 }
 
-/* ----------- Kindle Fire HD 7" ----------- */
-
-/* Portrait and Landscape */
-@media only screen
-and (min-device-width: 800px) {
-    .container {
-        height: calc(100% - 128px);
-    }
-}
-
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
     .container {
         max-width: 960px;
-        height: calc(100% - 128px);
     }
     .row {
-        height: 100%;
+        flex-direction: row;
         align-items: center;
     }
 
 /* --------------- table ------------------ */
     #coffees {
         padding: 2rem 0;
-        height: calc(100% - 3.25rem);
         margin-bottom: 0;
     }
 
@@ -167,11 +155,6 @@ and (min-device-width: 800px) {
     }
     p {
         font-size: 1.25rem;
-    }
-
-/* --------------- form ------------------ */
-    .forms {
-        height: calc(100% - 3.25rem);
     }
 }
 
