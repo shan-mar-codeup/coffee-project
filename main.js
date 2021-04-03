@@ -10,11 +10,15 @@ function renderCoffee(coffee) {
 }
 
 function renderCoffees(coffees) {
-    var html = '';
+    var htmlOdd = '', htmlEven = '';
     for(var i = 0; i < coffees.length; i++) {
-        html += renderCoffee(coffees[i]);
+        if (i % 2 === 0) {
+            htmlEven += renderCoffee(coffees[i]);
+        } else {
+            htmlOdd += renderCoffee(coffees[i]);
+        }
     }
-    return html;
+    return '<div id="coffees-even">' + htmlEven + '</div><div id="coffees-odd">' + htmlOdd + '</div>';
 }
 
 function updateCoffees(e) {
@@ -99,7 +103,7 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
+var coffeeTable = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var submitButton2 = document.querySelector('#submit2');
 var roastSelection = document.querySelector('#roast-selection');
@@ -107,7 +111,7 @@ var coffeeName = document.querySelector('#coffee-name');
 var coffeeName2 = document.querySelector('#name');
 var roast = document.querySelector('#roast');
 
-tbody.innerHTML = renderCoffees(coffees);
+coffeeTable.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 submitButton2.addEventListener('click', addNewCoffee);
