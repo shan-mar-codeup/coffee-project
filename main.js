@@ -39,7 +39,7 @@ function updateCoffees(e) {
         }
     });
 
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    coffeeTable.innerHTML = renderCoffees(filteredCoffees);
 }
 
 
@@ -53,7 +53,7 @@ function displayCoffeeByName() {
         }
     });
 
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    coffeeTable.innerHTML = renderCoffees(filteredCoffees);
 }
 
 function displayCoffeeByRoast() {
@@ -68,7 +68,7 @@ function displayCoffeeByRoast() {
         }
     });
 
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    coffeeTable.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // function addNewCoffee(input) {
@@ -82,7 +82,7 @@ function displayCoffeeByRoast() {
 //         }
 //     });
 //
-//     tbody.innerHTML = renderCoffees(coffees);
+//     coffeeTable.innerHTML = renderCoffees(coffees);
 // }
 
 function addNewCoffee(input) {
@@ -101,7 +101,7 @@ function addNewCoffee(input) {
     if (!isInList()) {
         coffees.unshift(coffeeAdded);
     }
-    tbody.innerHTML = renderCoffees(coffees);
+    coffeeTable.innerHTML = renderCoffees(coffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
